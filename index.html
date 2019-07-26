@@ -9,6 +9,8 @@
 
 <title>NewAgeSkill</title>
 
+<link rel="shortcut icon" href="img/iconlogo.png"/>
+
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
@@ -621,7 +623,7 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <form class="contact-form">
 <input type="text" class="input" placeholder="Name" required="name">
 <input type="email" class="input" placeholder="Email" required="email">
-<input type="number" class="input" placeholder="Phone" required="number">
+<input type="tel" class="input" placeholder="Phone" pattern="^\d{3}\d{3}\d{4}$" required>
 <input type="text" class="input" placeholder="Subject" required="text">
 <textarea class="input" placeholder="Message"></textarea>
 <button class="main-btn">Send message</button>
