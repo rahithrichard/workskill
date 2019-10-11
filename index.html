@@ -64,13 +64,15 @@
 <li><a href="#programs">Programs</a></li>
 <li><a href="#features">Why Us</a></li>
 <li><a href="#training">Training</a></li>
-<li><a href="#criteria">Critieria</a></li>
+<li class="has-dropdown"><a href="#blog">Application procedure</a>
+<ul class="dropdown">
+<li><a href="#">Browse jobs</a></li>
+<li><a href="#">Apply for skilling program</a></li>
+<li><a href="#">Take entry test</a></li>
+</ul>
+</li>
+<!-- <li><a href="#criteria">Critieria</a></li> -->
 <li><a href="#team">Team</a></li>
-<!-- <li class="has-dropdown"><a href="#blog">Blog</a> -->
-<!-- <ul class="dropdown">
-<li><a href="blog-single.html">blog post</a></li>
-</ul> -->
-<!-- </li> -->
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -170,32 +172,39 @@
 <h2 class="title">Skilling Programs </h2>
 </div>
 
-
 <div class="col-md-4 col-sm-6">
-<div class="service">
-<i class="fa fa-database"></i>
-<h3>Data Science</h3>
-<p>Data science is a multi-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data.<br><br><br></p>
-</div>
-</div>
-
+	<div class="service">
+	<i class="fa fa-cogs"></i>
+	<h3>Employability Skills</h3>
+	<p>Basic softskills training essential to any job covering Professional Communication Standards, Problem Solving, Logical Ability and new working trends.<br><br><br><br></p>
+	<div class="price-btn">
+		<button id="grab2" class="outline-btn" value="Employability Skills" onclick="grab(this.value)"><a href="#contact"> Grab_details</a></button>
+	</div>
+	</div>
+	</div>
 
 <div class="col-md-4 col-sm-6">
 <div class="service">
 <i class="fa fa-code"></i>
 <h3>JAVA</h3>
 <p>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.<br><br><br></p>
+<div class="price-btn">
+	<button id="grab1" class="outline-btn" value="JAVA" onclick="grab(this.value)"><a href="#contact"> Grab_details</a></button>
 </div>
 </div>
-
+</div>
 
 <div class="col-md-4 col-sm-6">
-<div class="service">
-<i class="fa fa-pencil"></i>
-<h3>.NET</h3>
-<p>.NET Framework is a software framework developed by Microsoft that runs primarily on Microsoft Windows. It includes a large class library named as Framework Class Library and provides language interoperability across several programming languages.</p>
-</div>
-</div>
+	<div class="service">
+	<i class="fa fa-database"></i>
+	<h3>Data Science</h3>
+	<p>Data science is a multi-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data.<br><br><br></p>
+	<div class="price-btn">
+		<button id="grab0" class="outline-btn" value="DATA SCIENCE" onclick="grab(this.value)"><a href="#contact"> Grab_details</a></button>
+	</div>
+	</div>
+	</div>
+
 
 
 
@@ -224,7 +233,7 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 </div>
 <div class="feature">
 <i class="fa fa-check"></i>
-<p>Opportunity to gain Technical skill at your convenience (place and time) from industry experts.</p>
+<p>Opportunity to gain skills at your convenience (place and time) from industry experts.</p>
 </div>
 <div class="feature">
 <i class="fa fa-check"></i>
@@ -305,12 +314,12 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 
 <div class="col-md-4">
 <div class="col-md-12 col-xs-12 work">
-<h5 align="center">Technical Plus</h5>
+<h5 align="center">Comprehensive</h5>
 <img class="img-responsive" src="img/work2.jpg" alt="">
 <div class="overlay"></div>
 <div class="work-content">
 <!-- <span>Technical Training</span> -->
-<h3>In addition to technical training, we will provide training to face interviews and gain confidence.</h3>
+<h3>Covers Essential Softskills + Required technical skills</h3>
 <!-- <div class="work-link">
 <a href="#"><i class="fa fa-external-link"></i></a>
 <a class="lightbox" href="img/work2.jpg"><i class="fa fa-search"></i></a>
@@ -328,7 +337,85 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 </div>
 
 
-<div id="criteria" class="section md-padding">
+
+<div id="blog" class="section md-padding bg-grey">
+
+	<div class="container">
+	
+	<div class="row">
+	
+	<div class="section-header text-center">
+	<h2 class="title">Application procedure</h2>
+	</div>
+	
+	
+	<div class="col-md-4">
+	<div class="blog">
+	<div class="blog-img">
+	<img class="img-responsive" src="img/blog3.jpg " alt="">
+	</div>
+	<div class="blog-content">
+	<ul class="blog-meta">
+	<li><i class="fa fa-user"></i>Admin</li>
+	<li><i class="fa fa-clock-o"></i>18 Sep</li>
+	<li><i class="fa fa-comments"></i>162</li>
+	</ul>
+	<h3>Browse jobs</h3>
+	<p>BPO Hiring</p>
+	<p><strong>Exp:</strong> Fresher or Experienced</p>
+	<p><strong>Location:</strong> Mumbai/Bangalore</p>
+	<a href="Jobs/jobs.html">Browse jobs</a>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-4">
+	<div class="blog">
+	<div class="blog-img">
+	<img class="img-responsive" src="img/blog1.jpg" alt="">
+	</div>
+	<div class="blog-content">
+	<ul class="blog-meta">
+	<li><i class="fa fa-user"></i>Admin</li>
+	<li><i class="fa fa-clock-o"></i>Yesterday</li>
+	<li><i class="fa fa-comments"></i>87</li>
+	</ul>
+	<h3>Apply for skilling program</h3>
+	<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+	<div class="apply-btn">
+		<a href="apply.html" class="outline-btn">Apply</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="col-md-4">
+	<div class="blog">
+	<div class="blog-img">
+	<img class="img-responsive" src="img/blog2.jpg" alt="">
+	</div>
+	<div class="blog-content">
+	<ul class="blog-meta">
+	<li><i class="fa fa-user"></i>Admin</li>
+	<li><i class="fa fa-clock-o"></i>Today</li>
+	<li><i class="fa fa-comments"></i>57</li>
+	</ul>
+	<h3>Take entry test when informed</h3>
+	<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+	<!-- <a href="blog-single.html">Read more</a> --><br>
+	</div>
+	</div>
+	</div>
+	
+	</div>
+	
+	</div>
+	
+	</div>
+
+
+<!-- <div id="criteria" class="section md-padding">
 
 <div class="container">
 
@@ -358,9 +445,9 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <p>Any Equivalent</p>
 </li>
 </ul>
-<!-- <div class="price-btn">
+<div class="price-btn">
 <button class="outline-btn">Purchase now</button>
-</div> -->
+</div>
 </div>
 </div>
 
@@ -384,9 +471,9 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <p>Designing</p>
 </li>
 </ul>
-<!-- <div class="price-btn">
+<div class="price-btn">
 <button class="outline-btn">Purchase now</button>
-</div> -->
+</div>
 </div>
 </div>
 
@@ -411,17 +498,17 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <p>Detail & Result Orientation</p>
 </li>
 </ul>
-<!-- <div class="price-btn">
+<div class="price-btn">
 <button class="outline-btn">Purchase now</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div> -->
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <div id="team" class="section md-padding">
 
@@ -506,79 +593,6 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 </div>
 
 
-<!-- <div id="blog" class="section md-padding bg-grey">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-header text-center">
-<h2 class="title">Recents news</h2>
-</div>
-
-
-<div class="col-md-4">
-<div class="blog">
-<div class="blog-img">
-<img class="img-responsive" src="img/blog1.jpg" alt="">
-</div>
-<div class="blog-content">
-<ul class="blog-meta">
-<li><i class="fa fa-user"></i>John doe</li>
-<li><i class="fa fa-clock-o"></i>18 Oct</li>
-<li><i class="fa fa-comments"></i>57</li>
-</ul>
-<h3>Molestie at elementum eu facilisis sed odio</h3>
-<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-<a href="blog-single.html">Read more</a>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="blog">
-<div class="blog-img">
-<img class="img-responsive" src="img/blog2.jpg" alt="">
-</div>
-<div class="blog-content">
-<ul class="blog-meta">
-<li><i class="fa fa-user"></i>John doe</li>
-<li><i class="fa fa-clock-o"></i>18 Oct</li>
-<li><i class="fa fa-comments"></i>57</li>
-</ul>
-<h3>Molestie at elementum eu facilisis sed odio</h3>
-<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-<a href="blog-single.html">Read more</a>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-4">
-<div class="blog">
-<div class="blog-img">
-<img class="img-responsive" src="img/blog3.jpg" alt="">
-</div>
-<div class="blog-content">
-<ul class="blog-meta">
-<li><i class="fa fa-user"></i>John doe</li>
-<li><i class="fa fa-clock-o"></i>18 Oct</li>
-<li><i class="fa fa-comments"></i>57</li>
-</ul>
-<h3>Molestie at elementum eu facilisis sed odio</h3>
-<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
-<a href="blog-single.html">Read more</a>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div> -->
-
 
 <div id="contact" class="section md-padding">
 
@@ -595,7 +609,7 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <div class="contact">
 <i class="fa fa-phone"></i>
 <h3>Phone</h3>
-<p><a href="tel:+919886021807">+91(988 602 1807)</a></p>
+<p><a href="tel:+918025276313">+91-80-25276313</a></p>
 </div>
 </div>
 
@@ -619,16 +633,16 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 </div>
 
 
-<div class="col-md-8 col-md-offset-2">
-<form class="contact-form">
-<input type="text" class="input" placeholder="Name" required="name">
-<input type="email" class="input" placeholder="Email" required="email">
-<input type="tel" class="input" placeholder="Phone" pattern="^\d{3}\d{3}\d{4}$" required>
-<input type="text" class="input" placeholder="Subject" required="text">
-<textarea class="input" placeholder="Message"></textarea>
-<button class="main-btn">Send message</button>
+<!-- <div class="col-md-8 col-md-offset-2">
+<form class="contact-form" method="POST" action="store.php">
+<input type="text" class="input" name="name" placeholder="Name" required="name">
+<input type="email" class="input" name="email" placeholder="Email" required="email" >
+<input type="tel" class="input" name="phone" placeholder="Phone" 	>
+<input id="subject" type="text" name="sub" class="input" placeholder="Subject" required="text" >
+<textarea class="input" name="msg" placeholder="Message"></textarea>
+<button class="main-btn" type="submit" value="send">Send message</button>
 </form>
-</div>
+</div> -->
 
 </div>
 
@@ -691,5 +705,6 @@ Provides a package along with Interview preparation, Soft skills and self awaren
 <script type="4ecc8c6ab69a1f464e921f69-text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="4ecc8c6ab69a1f464e921f69-text/javascript" src="js/jquery.magnific-popup.js"></script>
 <script type="4ecc8c6ab69a1f464e921f69-text/javascript" src="js/main.js"></script>
-<script src="js/rocket-loader.min.js" data-cf-settings="4ecc8c6ab69a1f464e921f69-|49" defer=""></script></body>
+<script src="js/rocket-loader.min.js" data-cf-settings="4ecc8c6ab69a1f464e921f69-|49" defer=""></script>
+</body>
 </html>

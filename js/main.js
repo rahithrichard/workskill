@@ -11,3 +11,7 @@ $(window).on('load',function(){$("#preloader").delay(600).fadeOut();});$('body')
  //      $('.home-content').fadeIn();
  //     }
  // });
+
+function grab(value){
+		 document.getElementById('subject').value=value;
+}
