@@ -34,8 +34,8 @@ if(isset($_POST["submit"]))
  //  $programming_languages .= $row . ', ';
  // }
  // $programming_languages = substr($programming_languages, 0, -2);
- // $path = 'uploads/' . $_FILES["resume"]["name"];
- // move_uploaded_file($_FILES["resume"]["tmp_name"], $path);
+  $path = 'uploads/' . $_FILES["resume"]["name"];
+  move_uploaded_file($_FILES["resume"]["tmp_name"], $path);
  $message = '
   <h3 align="center">Programmer Details</h3>
   <table border="1" width="100%" cellpadding="5" cellspacing="5">

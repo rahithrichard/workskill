@@ -4,7 +4,7 @@
 	?>
 <?php
 	$name = $_POST['name'];
-	$email = $_POST['email_id'];
+	$email = $_POST['email_id']; 
 	$phone = $_POST['phone'];
 	$subject = $_POST['sub'];
 	$message = $_POST['msg'];
