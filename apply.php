@@ -1,3 +1,57 @@
+<?php
+error_reporting(0);
+    include ('connection.php');
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email']; 
+    $phone = $_POST['phone'];
+
+
+    $file = $_FILES['efile']['name'];
+   $path = pathinfo($file);
+   $ext = $path['extension'];
+   $file = $file;
+   $file_loc = $_FILES['efile']['tmp_name'];
+   $file_size = $_FILES['efile']['size'];
+   $file_type = $_FILES['efile']['type'];
+   $folder = "resume/";
+if(move_uploaded_file($file_loc, $folder . $file)) {
+        $file=$file;
+   }
+   else
+   {
+       $file="";
+   }
+
+   $check =mysqli_query($con,"SELECT * FROM users where email_id='$email' OR phone='$phone'");
+   $count=mysqli_num_rows($check);
+   if($count == ''){
+
+   
+
+   $sql = "INSERT INTO users(name, email_id, phone,resume) values ('$name', '$email', '$phone', '$file')";
+   $success = mysqli_query($con,$sql);
+
+if($success)
+{
+    $msg = '<h3 style="color:green;">Inserted Success</h3>';
+}
+else
+{
+    $msg = '<h3 style="color:red;">Inserted Failed</h3>';
+}
+
+}
+else{
+    $msg = '<h3 style="color:red;">Already exist</h3>';
+}
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +89,15 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Submit Application for Skill Program</h2>
-                    <form method="POST">
+
+<?php echo $msg;?>
+
+                    <form method="POST"  enctype="multipart/form-data">
                         <div class="input-group">
                             <input class="input--style-1" type="name" placeholder="NAME" name="name" required>
                         </div>
                          <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="EMAIL" name="name" required="EMAIL">
+                            <input class="input--style-1" type="email" placeholder="EMAIL" name="email" required="EMAIL">
                         </div>
                           <div class="row row-space">
                              <div class="col-2">
@@ -72,11 +129,11 @@
                         <div class="rectangle" align="centre">
                             &emsp;&nbsp;&nbsp;Upload Resume
                             <div style="padding: 20px;">
-                               <input type="file" name="fileupload" value="fileupload" id="fileupload">
+                               <input type="file" value="fileupload" name="efile" id="fileupload">
                             </div>
                         </div>
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                            <button class="btn btn--radius btn--green" name="submit" type="submit" value="send">Submit</button>
                         </div>
                     </form>
                 </div>

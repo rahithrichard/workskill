@@ -164,7 +164,7 @@
     <div class="container fluid">
      
         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg">View</button>&ensp;
-        <button type="button" class="btn btn-outline-primary"  onclick="window.location.href = '../apply.html';">Apply for skilling</button>
+        <button type="button" class="btn btn-outline-primary"  onclick="window.location.href = '../apply.php';">Apply for skilling</button>
      
       </div>
     <div class="course-author">
