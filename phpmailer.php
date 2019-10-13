@@ -1,18 +1,3 @@
-readers
-
-1 of 1,058
-php file php mailer
-Inbox
-x
-
-Vinay Prithiyani <NewAgeSkill.com>
-Attachments
-10:45 AM (6 minutes ago)
-to me
-
-
-Attachments area
-
 <?php
 //index.php
 
@@ -28,14 +13,14 @@ function clean_text($string)
 
 if(isset($_POST["submit"]))
 {
- // $programming_languages = '';
- // foreach($_POST["programming_languages"] as $row)
- // {
- //  $programming_languages .= $row . ', ';
- // }
- // $programming_languages = substr($programming_languages, 0, -2);
-  $path = 'uploads/' . $_FILES["resume"]["name"];
-  move_uploaded_file($_FILES["resume"]["tmp_name"], $path);
+ $programming_languages = '';
+ foreach($_POST["programming_languages"] as $row)
+ {
+  $programming_languages .= $row . ', ';
+ }
+ $programming_languages = substr($programming_languages, 0, -2);
+ $path = 'uploads/' . $_FILES["resume"]["name"];
+ move_uploaded_file($_FILES["resume"]["tmp_name"], $path);
  $message = '
   <h3 align="center">Programmer Details</h3>
   <table border="1" width="100%" cellpadding="5" cellspacing="5">
@@ -44,20 +29,28 @@ if(isset($_POST["submit"]))
     <td width="70%">'.$_POST["name"].'</td>
    </tr>
    <tr>
+    <td width="30%">Address</td>
+    <td width="70%">'.$_POST["address"].'</td>
+   </tr>
+   <tr>
     <td width="30%">Email Address</td>
     <td width="70%">'.$_POST["email"].'</td>
    </tr>
-    <tr>
-    <td width="30%">Phone Number</td>
-    <td width="70%">'.$_POST['phone'].'</td>
-   </tr>
    <tr>
     <td width="30%">Progamming Language Knowledge</td>
-    <td width="70%">'.$_POST['sub'].'</td>
+    <td width="70%">'.$programming_languages.'</td>
    </tr>
    <tr>
     <td width="30%">Experience Year</td>
-    <td width="70%">'.$_POST['msg'].'</td>
+    <td width="70%">'.$_POST["experience"].'</td>
+   </tr>
+   <tr>
+    <td width="30%">Phone Number</td>
+    <td width="70%">'.$_POST["mobile"].'</td>
+   </tr>
+   <tr>
+    <td width="30%">Additional Information</td>
+    <td width="70%">'.$_POST["additional_information"].'</td>
    </tr>
   </table>
  ';
@@ -68,19 +61,19 @@ if(isset($_POST["submit"]))
  $mail->From = $_POST["email"];     //Sets the From email address for the message
  $mail->FromName = $_POST["name"];    //Sets the From name of the message
  //To address and name
-$cumail="iwanttolearn@anytimelearn.in";
+$cumail="rathinram011@gmail.com";
 $mail->addAddress($cumail);
  
  $mail->AddAddress('web-tutorial@programmer.net', 'Webslesson');  //Adds a "To" address
  $mail->WordWrap = 50;       //Sets word wrapping on the body of the message to a given number of characters
  $mail->IsHTML(true);       //Sets message type to HTML
  $mail->AddAttachment($path);     //Adds an attachment from a path on the filesystem
- $mail->Subject = 'Get touch with us';    //Sets the Subject of the message
+ $mail->Subject = 'Application for Programmer Registration';    //Sets the Subject of the message
  $mail->Body = $message;       //An HTML or plain text message body
  if($mail->Send())        //Send an Email. Return true on success or false on error
  {
   $message = '<div class="alert alert-success">Application Successfully Submitted</div>';
-  // unlink($path);
+  unlink($path);
  }
  else
  {
