@@ -45,6 +45,7 @@ else
         	</center>
 
         </div>
+        <?php echo $msg;?>
         <div class="container">
         	<div class="container-fluid">
         	<h2>Add jobs</h2>

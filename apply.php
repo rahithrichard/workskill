@@ -36,6 +36,46 @@ if(move_uploaded_file($file_loc, $folder . $file)) {
 if($success)
 {
     $msg = '<h3 style="color:green;">Inserted Success</h3>';
+
+
+$path = 'resume/' . $_FILES["efile"]["name"];
+ move_uploaded_file($_FILES["efile"]["tmp_name"], $path);
+ $message = '
+  <h3 align="center">User Details</h3>
+  <table border="1" width="100%" cellpadding="5" cellspacing="5">
+   <tr>
+    <td width="30%">Name</td>
+    <td width="70%">'.$_POST["name"].'</td>
+   </tr>
+   <tr>
+    <td width="30%">Email Address</td>
+    <td width="70%">'.$_POST["email"].'</td>
+   </tr>
+   <tr>
+    <td width="30%">Phone Number</td>
+    <td width="70%">'.$_POST["phone"].'</td>
+   </tr>
+  </table>
+ ';
+ 
+ require 'PHPMailer/class.phpmailer.php';
+ $mail = new PHPMailer;
+
+ $mail->From = $_POST["email"];     //Sets the From email address for the message
+ $mail->FromName = $_POST["name"];    //Sets the From name of the message
+ //To address and name
+$cumail="rahithrichard@gmail.com";
+$mail->addAddress($cumail);
+ 
+ $mail->AddAddress('newageskills.com', 'Skills');  //Adds a "To" address
+ $mail->WordWrap = 50;       //Sets word wrapping on the body of the message to a given number of characters
+ $mail->IsHTML(true);       //Sets message type to HTML
+ $mail->AddAttachment($path);     //Adds an attachment from a path on the filesystem
+ $mail->Subject = 'Application for User Registration';    //Sets the Subject of the message
+ $mail->Body = $message;       //An HTML or plain text message body
+ $mail->Send();
+
+
 }
 else
 {
